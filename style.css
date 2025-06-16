@@ -277,3 +277,73 @@ main.container {
   margin: 0 auto 20px;
   line-height: 1.6;
 }
+
+
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.testimonial {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  font-style: italic;
+  position: relative;
+}
+
+.testimonial h4 {
+  margin-top: 15px;
+  font-style: normal;
+  color: #0c5470;
+}
+
+
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #0c5470;
+  color: white;
+  margin-top: auto;
+}
+
+
+
+
+.cta-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #eef7fa;
+}
+
+.cta-section h2 {
+  margin-bottom: 10px;
+  font-size: 2em;
+  color: #00779b;
+}
+
+.cta-section p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.cta-button {
+  background-color: #f6c105;
+  color: #000;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background-color: #e6b002;
+}
