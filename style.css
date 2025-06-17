@@ -10,12 +10,8 @@ html, body {
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
   color: #333;
-}
-
-body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 /* === Navigation === */
@@ -31,12 +27,23 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 15px;
   font-weight: bold;
 }
 
@@ -62,29 +69,10 @@ section:nth-of-type(even) {
   background-color: #eef7fa;
 }
 
-/* === Hero Section === */
-.hero {
-  background: linear-gradient(to right, #0c5470, #00779b);
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 3em;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 1.3em;
-  max-width: 800px;
-  margin: 0 auto 25px;
-}
-
-/* === Headings & Text === */
 h1, h2, h3 {
   color: #00779b;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 p {
@@ -95,16 +83,35 @@ p {
   margin-right: auto;
 }
 
-ul {
-  text-align: left;
-  max-width: 800px;
-  margin: 20px auto;
-  padding-left: 20px;
+.hero {
+  background: url('images/videoframe_6388.png') no-repeat center center/cover;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
 }
 
-ul li {
-  margin-bottom: 10px;
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: 1;
 }
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+.hero h1,
+.hero h2,
+.hero p {
+  color: #ffffff; /* White text */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Optional: adds contrast */
+}
+
 
 /* === Buttons === */
 .cta-button {
@@ -116,25 +123,12 @@ ul li {
   border-radius: 5px;
   transition: background-color 0.3s ease;
   display: inline-block;
-  margin-top: 20px;
+  margin: 20px auto;
+  width: fit-content;
 }
 
 .cta-button:hover {
   background-color: #e6b002;
-}
-
-/* === Back Button === */
-.back-button {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  background-color: #f6c105;
-  color: black;
-  padding: 8px 15px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  z-index: 999;
 }
 
 /* === Contact Links === */
@@ -144,7 +138,7 @@ ul li {
 
 .contact-links a {
   display: inline-block;
-  margin: 10px 10px;
+  margin: 10px;
   padding: 10px 20px;
   text-decoration: none;
   color: white;
@@ -194,78 +188,7 @@ ul li {
   margin-bottom: 10px;
 }
 
-/* === Footer === */
-footer {
-  text-align: center;
-  padding: 20px 10px;
-  background-color: #0c5470;
-  color: white;
-  width: 100%;
-  margin-top: auto;
-  font-size: 0.95em;
-}
-
-
-
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-main.container {
-  flex: 1;
-}
-
-
-
-@media (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .cta-button {
-    width: 100%;
-    text-align: center;
-    margin: 10px 0;
-  }
-
-  .ingredients {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-.testimonials {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.testimonial {
-  background: #ffffff;
-  border-left: 5px solid #0c5470;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  border-radius: 10px;
-  text-align: left;
-}
-
-.testimonial h3 {
-  color: #00779b;
-  margin-top: 10px;
-  font-size: 1em;
-}
-
-.testimonial p {
-  font-style: italic;
-}
-
-
+/* === Testimonials Section === */
 .testimonials-preview {
   background-color: #eef7fa;
   padding: 60px 20px;
@@ -278,8 +201,6 @@ main.container {
   line-height: 1.6;
 }
 
-
-
 .testimonials {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -290,10 +211,11 @@ main.container {
 .testimonial {
   background: #fff;
   padding: 20px;
-  border-radius: 10px;
+  border-left: 5px solid #0c5470;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  text-align: left;
   font-style: italic;
-  position: relative;
 }
 
 .testimonial h4 {
@@ -302,19 +224,18 @@ main.container {
   color: #0c5470;
 }
 
-
-
+/* === Footer === */
 footer {
   text-align: center;
-  padding: 20px 0;
+  padding: 20px 10px;
   background-color: #0c5470;
   color: white;
+  width: 100%;
   margin-top: auto;
+  font-size: 0.95em;
 }
 
-
-
-
+/* === CTA Section === */
 .cta-section {
   text-align: center;
   padding: 40px 20px;
@@ -333,37 +254,333 @@ footer {
   color: #333;
 }
 
-.cta-button {
-  background-color: #f6c105;
-  color: #000;
-  padding: 12px 25px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  display: inline-block;
-}
-
-.cta-button:hover {
-  background-color: #e6b002;
-}
-
-
-/* Responsive Navigation Fix */
+/* === Responsive Design === */
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
     align-items: center;
-  }
-
-  .nav-container > div {
-    margin-bottom: 10px;
     text-align: center;
   }
 
-  nav a {
-    display: block;
-    margin: 8px 0;
-    font-size: 1.1em;
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .logo img {
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .cta-button {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .ingredients {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
   }
 }
+
+
+
+/* === Product Splash Section === */
+.splash-highlight {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.splash-highlight .splash-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.splash-highlight .splash-tagline {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #0c5470;
+  font-weight: bold;
+}
+
+
+
+/* === Splash Background Section === */
+.splash-bg-section {
+  background-image: url('images/videoframe_6388.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 120px 20px;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.splash-bg-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Optional dark overlay */
+  z-index: 1;
+}
+
+.splash-text {
+  position: relative;
+  z-index: 2;
+}
+
+.splash-text h2 {
+  font-size: 2em;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+
+.hero h1 {
+  font-weight: 800;
+  font-size: 3em;
+}
+
+.hero h2 {
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+
+.product-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.product-box {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.product-box img {
+  max-width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.section-title {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 2em;
+  color: #00779b;
+}
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.product-item {
+  text-align: center;
+  max-width: 300px;
+}
+
+.product-thumb {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-thumb:hover {
+  transform: scale(1.05);
+}
+
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animate Hero Content */
+.hero h1,
+.hero h2,
+.hero p,
+.hero .cta-button {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+/* Stagger each element */
+.hero h1 { animation-delay: 0.2s; }
+.hero h2 { animation-delay: 0.4s; }
+.hero p  { animation-delay: 0.6s; }
+.hero .cta-button { animation-delay: 0.8s; }
+
+/* Button Hover Animation */
+.cta-button {
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+body, p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+.enlargeable {
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .enlargeable:hover {
+    opacity: 0.8;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  .close {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+
+  @media (max-width: 600px) {
+  .modal-content {
+    max-width: 95%;
+    max-height: 80%;
+  }
+}
+
+
+
+.faq {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.faq details {
+  background-color: #f0f8ff;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.faq summary {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+
+.faq-section {
+  margin: 40px 0;
+  padding: 0 20px;
+}
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.faq-section details {
+  margin-bottom: 15px;
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.faq-section summary {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.faq-section p {
+  margin-top: 10px;
+}
+
+
