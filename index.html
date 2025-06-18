@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -35,8 +34,8 @@
     gtag('js', new Date());
     gtag('config', 'G-QMTHS3R7N0');
   </script>
-</head>
 
+</head>
 
 <body>
 
@@ -57,51 +56,76 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="container">
-      <h1>Welcome to Renata Health World S/L</h1>
-      <h2>Nature’s most powerful ingredients in one sachet.</h2>
-      <p>Empowering People with Health and Income Opportunities</p>
-      <a href="https://wa.me/23272146015" class="cta-button">Join Us on WhatsApp</a>
+  <!-- Moving Banner Section -->
+  <section class="banner-slider">
+    <div class="slides">
+      <img src="images/banner1.jpg.webp" alt="Stem Cell Nutrition" loading="lazy">
+      <img src="images/banner2.jpg.webp" alt="Health & Wellness" loading="lazy">
+      <img src="images/banner3.jpg.jpeg" alt="Income Opportunity" loading="lazy">
     </div>
-  </header>
+  </section>
+
+  <style>
+    .banner-slider {
+      position: relative;
+      width: 100%;
+      max-height: 500px;
+      overflow: hidden;
+    }
+
+    .banner-slider .slides {
+      display: flex;
+      width: 300%;
+      animation: slideBanner 12s infinite;
+    }
+
+    .banner-slider .slides img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    @keyframes slideBanner {
+      0% { transform: translateX(0%); }
+      33% { transform: translateX(0%); }
+      40% { transform: translateX(-100%); }
+      66% { transform: translateX(-100%); }
+      73% { transform: translateX(-200%); }
+      100% { transform: translateX(-200%); }
+    }
+  </style>
 
   <!-- About Section -->
   <section class="about">
     <div class="container">
       <h2>About Us</h2>
-      <p>Renata Health World S/L is a global wellness company committed to restoring lives through innovative health solutions and stem cell nutrition. Join the health and wealth movement today.</p>
+      <p>Renata Health World S/L is a global wellness company committed to restoring <br/> lives through innovative health solutions and stem cell nutrition. <br/> Join the health and wealth movement today.</p>
       <a href="about.html" class="cta-button">Know More</a>
     </div>
   </section>
 
- 
-<!-- Product Preview -->
-<section class="product-preview">
-  <div class="container">
-    <h2>Our Signature Product</h2>
-    <div class="product-image">
-      <img src="images/2.jpg" alt="Renata StemFood Cell" class="enlargeable" loading="lazy">
+  <!-- Product Preview -->
+  <section class="product-preview">
+    <div class="container">
+      <h2>Our Signature Product</h2>
+      <div class="product-image">
+        <img src="images/2.jpg" alt="Renata StemFood Cell" class="enlargeable" loading="lazy">
+      </div>
+      <p><strong>Renata StemFood Cell</strong> – Premium stem cell supplement with 6 natural <br/> ingredients. Supports cellular health, immunity & glowing skin.</p>
     </div>
-    <p><strong>Renata StemFood Cell</strong> – Premium stem cell supplement with 6 natural ingredients. Supports cellular health, immunity & glowing skin.</p>
+  </section>
+
+  <!-- Image Modal Structure -->
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
   </div>
-</section>
-
-
-<!-- Image Modal Structure -->
-<div id="imageModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="modalImage">
-</div>
-
-
 
   <!-- Opportunity Preview -->
   <section class="opportunity">
     <div class="container">
       <h2>Income Opportunity</h2>
-      <p>Whether you're looking for extra income or a business career, Renata Health World S/L gives you a powerful platform to earn by promoting wellness products.</p>
+      <p>Whether you're looking for extra income or a business career, Renata Health World S/L <br/> gives you a powerful platform to earn by promoting wellness products.</p>
       <a href="opportunity.html" class="cta-button">Learn More</a>
     </div>
   </section>
@@ -110,8 +134,28 @@
   <section class="testimonials">
     <div class="container">
       <h2>What People Are Saying</h2>
-      <p>Real stories from real people — see how Renata Health World S/L is changing lives around the world.</p>
+      <p>Real stories from real people — see how Renata Health World S/L <br/> is changing lives around the world.</p>
       <a href="testimonials.html" class="cta-button">View Testimonials</a>
+    </div>
+  </section>
+
+  <!-- Blog Preview Section -->
+  <section class="blog-preview">
+    <div class="container">
+      <h2>Latest from Our Blog</h2>
+
+      <div class="blog-post">
+        <h3>🌿 5 Natural Ingredients to Boost Your Stem Cells</h3>
+        <p>Discover how apple stem cell, grape stem cell, melon antioxidant and more work together for cellular health and anti-aging effects.</p>
+        <a href="blog.html" class="cta-button">Read More</a>
+      </div>
+
+      <div class="blog-post">
+        <h3>💪 Success Story: How Fatmata Improved Her Energy with StemFood</h3>
+        <p>Fatmata from Sierra Leone shares her journey using Renata StemFood Cell for better immunity and energy levels.</p>
+        <a href="blog.html" class="cta-button">Read More</a>
+      </div>
+
     </div>
   </section>
 
@@ -140,34 +184,34 @@
   </script>
 
   <!-- Footer -->
-<script>
-  const modal = document.getElementById("imageModal");
-  const modalImg = document.getElementById("modalImage");
-  const images = document.querySelectorAll(".enlargeable");
-  const closeBtn = document.querySelector(".close");
+  <script>
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const images = document.querySelectorAll(".enlargeable");
+    const closeBtn = document.querySelector(".close");
 
-  images.forEach(img => {
-    img.onclick = function () {
-      modal.style.display = "block";
-      modalImg.src = this.src;
-    };
-  });
+    images.forEach(img => {
+      img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+      };
+    });
 
-  closeBtn.onclick = function () {
-    modal.style.display = "none";
-  };
-
-  modal.onclick = function (e) {
-    if (e.target === modal) {
+    closeBtn.onclick = function () {
       modal.style.display = "none";
-    }
-  };
-</script>
+    };
 
+    modal.onclick = function (e) {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
 
-<footer>
-  <p>&copy; 2025 Renata Health World S/L. All rights reserved.</p>
-  <p style="font-size: 0.9em; opacity: 0.8;">Together we Rise – Powered by Renata Global.</p>
-</footer>
+  <footer>
+    <p>&copy; 2025 Renata Health World S/L. All rights reserved.</p>
+    <p style="font-size: 0.9em; opacity: 0.8;">Together we Rise – Powered by Renata Global.</p>
+  </footer>
+
 </body>
 </html>

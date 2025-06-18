@@ -365,3 +365,65 @@ footer {
     max-height: 80%;
   }
 }
+
+
+.blog-preview {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.blog-preview .blog-post {
+  margin-bottom: 20px;
+}
+
+.blog-preview h3 {
+  font-size: 1.4em;
+  color: #0c5470;
+}
+
+.blog-preview p {
+  max-width: 700px;
+  margin: 10px auto;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+
+/* === Moving Banner Slider === */
+.banner-slider {
+  position: relative;
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.banner-slider .slides {
+  display: flex;
+  width: 300%;
+  animation: slideBanner 12s infinite;
+}
+
+.banner-slider .slides img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@keyframes slideBanner {
+  0% { transform: translateX(0%); }
+  33% { transform: translateX(0%); }
+  40% { transform: translateX(-100%); }
+  66% { transform: translateX(-100%); }
+  73% { transform: translateX(-200%); }
+  100% { transform: translateX(-200%); }
+}
+
+/* Responsive Banner */
+@media (max-width: 768px) {
+  .banner-slider {
+    max-height: 300px;
+  }
+}
+
