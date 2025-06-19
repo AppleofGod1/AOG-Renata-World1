@@ -22,6 +22,9 @@
   <meta name="twitter:description" content="Discover life-changing health and wealth with Renata Health World S/L’s stem cell products." />
   <meta name="twitter:image" content="https://renata-health-world-sl.netlify.app/images/2.jpg" />
 
+  <meta name="google-site-verification" content="AqGdzHdogt0-mCi23b-K0SAFhmsNrHlub5KAweE5JBU" />
+
+
   <title>Stem Cell Wellness & Business | Renata Health World S/L</title>
 
   <link rel="stylesheet" href="style.css" />
@@ -56,44 +59,98 @@
     </div>
   </nav>
 
-  <!-- Moving Banner Section -->
-  <section class="banner-slider">
-    <div class="slides">
-      <img src="images/banner1.jpg.webp" alt="Stem Cell Nutrition" loading="lazy">
-      <img src="images/banner2.jpg.webp" alt="Health & Wellness" loading="lazy">
-      <img src="images/banner3.jpg.jpeg" alt="Income Opportunity" loading="lazy">
+  <!-- Hero Carousel Section (Updated Taller Banner) -->
+<section class="hero-carousel">
+  <div class="carousel">
+    <div class="carousel-slide active">
+      <img src="images/renata1.jpg" alt="Stem Cell Product 1" loading="lazy">
     </div>
-  </section>
+    <div class="carousel-slide">
+      <img src="images/renata2.jpg" alt="Stem Cell Product 2" loading="lazy">
+    </div>
+    <div class="carousel-slide">
+      <img src="images/renata3.jpg" alt="Renata Opportunity" loading="lazy">
+    </div>
+  </div>
+  <div class="carousel-text">
+    <h1>Welcome to Renata Health World S/L</h1>
+    <h2>Discover Health & Income with Stem Cell Wellness</h2>
+    <a href="https://wa.me/23272146015" class="cta-button">Join Us on WhatsApp</a>
+  </div>
+</section>
 
-  <style>
-    .banner-slider {
-      position: relative;
-      width: 100%;
-      max-height: 500px;
-      overflow: hidden;
-    }
+<!-- Carousel Styles (can go inside <style> or style.css) -->
+<style>
+.hero-carousel {
+  position: relative;
+  height: 500px; /* Increased height */
+  overflow: hidden;
+}
 
-    .banner-slider .slides {
-      display: flex;
-      width: 300%;
-      animation: slideBanner 12s infinite;
-    }
+.carousel {
+  display: flex;
+  height: 100%;
+  width: 300%; /* 3 slides */
+  animation: slide 25s infinite;
+}
 
-    .banner-slider .slides img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
+.carousel-slide {
+  width: 100%;
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
 
-    @keyframes slideBanner {
-      0% { transform: translateX(0%); }
-      33% { transform: translateX(0%); }
-      40% { transform: translateX(-100%); }
-      66% { transform: translateX(-100%); }
-      73% { transform: translateX(-200%); }
-      100% { transform: translateX(-200%); }
-    }
-  </style>
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-text {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 10;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+.carousel-text h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.carousel-text h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0%); }
+  33% { transform: translateX(0%); }
+  40% { transform: translateX(-100%); }
+  73% { transform: translateX(-100%); }
+  80% { transform: translateX(-200%); }
+  100% { transform: translateX(-200%); }
+}
+
+@media (max-width: 768px) {
+  .hero-carousel {
+    height: 300px; /* Adjust for mobile */
+  }
+
+  .carousel-text h1 {
+    font-size: 1.8em;
+  }
+
+  .carousel-text h2 {
+    font-size: 1em;
+  }
+}
+</style>
+
 
   <!-- About Section -->
   <section class="about">
