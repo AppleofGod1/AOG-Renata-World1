@@ -1,40 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://renatahealthworldsl.com/</loc>
-    <lastmod>2025-06-19</lastmod>
-    <priority>1.00</priority>
-  </url>
-
-  <url>
-    <loc>https://renatahealthworldsl.com/about</loc>
-    <lastmod>2025-06-19</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://renatahealthworldsl.com/opportunity</loc>
-    <lastmod>2025-06-19</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://renatahealthworldsl.com/testimonials</loc>
-    <lastmod>2025-06-19</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://renatahealthworldsl.com/blog</loc>
-    <lastmod>2025-06-19</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://renatahealthworldsl.com/contact</loc>
-    <lastmod>2025-06-19</lastmod>
-    <priority>0.80</priority>
-  </url>
-
+<url>
+<loc>https://renatahealthworldsl.com/</loc>
+<lastmod>2025-06-19</lastmod>
+<priority>1.00</priority>
+</url>
+<url>
+<loc>https://renatahealthworldsl.com/about</loc>
+<lastmod>2025-06-19</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://renatahealthworldsl.com/opportunity</loc>
+<lastmod>2025-06-19</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://renatahealthworldsl.com/testimonials</loc>
+<lastmod>2025-06-19</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://renatahealthworldsl.com/blog</loc>
+<lastmod>2025-06-19</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://renatahealthworldsl.com/contact</loc>
+<lastmod>2025-06-19</lastmod>
+<priority>0.80</priority>
+</url>
 </urlset>
