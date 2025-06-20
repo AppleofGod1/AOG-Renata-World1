@@ -401,3 +401,22 @@ footer {
     font-size: 1em;
   }
 }
+
+
+.about-renata p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.about-renata ul {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.about-renata img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
