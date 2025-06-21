@@ -523,5 +523,15 @@ footer {
   }
 }
 
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 18px;   /* adjust top spacing */
+  right: 20px; /* move to the right corner */
+  z-index: 1001; /* stay on top */
+}
+
+
 
 
