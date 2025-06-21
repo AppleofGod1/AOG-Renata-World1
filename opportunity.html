@@ -113,12 +113,14 @@
 <body>
 
 <!-- Navigation -->
+
 <nav>
   <div class="nav-container">
     <div class="logo">
-      <img src="images/Renata-Health-World-3D-logo-768x240.png" alt="Renata Health World S/L Logo">
+      <img src="images/Renata-Health-World-3D-logo-768x240.png" alt="Renata Logo">
     </div>
-    <div class="nav-links">
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <div class="nav-links" id="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="opportunity.html">Opportunity</a>
@@ -128,6 +130,7 @@
     </div>
   </div>
 </nav>
+
 
 <!-- Main Content -->
 <div class="container">
@@ -264,6 +267,18 @@
     }
   };
 </script>
+
+
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+  });
+</script>
+
 
 <!-- Footer -->
 <footer>
