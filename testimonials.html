@@ -128,18 +128,12 @@
 <body>
 
 <!-- Navigation -->
-
 <nav>
   <div class="nav-container">
-    <!-- Logo -->
     <div class="logo">
       <img src="images/Renata-Health-World-3D-logo-768x240.png" alt="Renata Logo">
     </div>
-
-    <!-- Hamburger Icon -->
-    <div class="menu-icon" id="menu-icon" onclick="toggleMenu()">&#9776;</div>
-
-    <!-- Navigation Links -->
+    <div class="hamburger" id="hamburger">&#9776;</div>
     <div class="nav-links" id="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -150,7 +144,6 @@
     </div>
   </div>
 </nav>
-
 
 
 
@@ -238,6 +231,18 @@
   </details>
 </section>
 
+
+<!-- Mobile Nav Script -->
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+
 <!-- WhatsApp Floating Button -->
 <script type="text/javascript">
   (function () {
@@ -280,17 +285,6 @@
       modal.style.display = "none";
     }
   };
-</script>
-
-
-
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
-
-  hamburger.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-  });
 </script>
 
 

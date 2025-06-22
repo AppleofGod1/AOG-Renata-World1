@@ -518,3 +518,38 @@ footer {
     z-index: 1000;
   }
 }
+
+
+/* Make all content inside .container fit on small screens */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem; /* add small padding */
+  box-sizing: border-box;
+}
+
+/* Fix ingredients grid */
+.ingredients {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* Ensure images are responsive */
+.enlargeable {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+/* Prevent body overflow */
+body {
+  overflow-x: hidden;
+}
+
+
+
+
+
