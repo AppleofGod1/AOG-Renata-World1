@@ -4,9 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Renata Health World S/L | Stem Cell Wellness & Income Opportunity — Sierra Leone's trusted wellness & wealth platform. Stem cell nutrition + income opportunity." />
+  <meta name="description" content="Renata Health World S/L | Stem Cell Wellness, Health Supplements, Skincare, Income Opportunity. Sierra Leone’s trusted platform for stem cell nutrition, wellness, beauty, and business success." />
+  
+  <meta name="keywords" content="Renata Health World, stem cell supplements Sierra Leone, stem food, wellness business, stem cell Africa, skincare, Risepresso coffee, stem cell nutrition Sierra Leone, stem cell health, income opportunity, Freetown health products, best wellness products Africa, Sierra Leone supplements, Renata opportunity" />
+  
+  <meta name="author" content="Renata Health World S/L" />
 
+  <title>Renata Health World S/L | Stem Cell Wellness, Skincare & Business Opportunity</title>
 
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" sizes="64x64" />
+  
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-15SYN1T8YD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,46 +24,33 @@
     gtag('config', 'G-15SYN1T8YD');
   </script>
 
-  <title>Your Page Title</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Google Site Verification -->
-  <meta name="google-site-verification" content="AqGdzHdogt0-mCi23b-K0SAFhmsNrHlub5KAweE5JBU" />
-<link rel="icon" type="image/png" href="images/favicon.png" sizes="64x64">
-
-
-   <meta property="og:title" content="Renata Health World S/L | Stem Cell Wellness & Business" />
-  <meta property="og:description" content="Discover stem cell nutrition and business opportunity with Renata Health World S/L." />
+  <!-- Open Graph Meta Tags (for SEO + Social Sharing) -->
+  <meta property="og:title" content="Renata Health World S/L | Stem Cell Wellness & Business" />
+  <meta property="og:description" content="Discover premium stem cell nutrition, health supplements, and business opportunity with Renata Health World S/L — Sierra Leone & Africa." />
   <meta property="og:image" content="https://renatahealthworldsl.com/images/2.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:url" content="https://renatahealthworldsl.com/" />
+  <meta property="og:type" content="website" />
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Renata Health World S/L | Stem Cell Wellness & Business" />
-  <meta name="twitter:description" content="Discover life-changing stem cell nutrition & income opportunity with Renata Health World S/L." />
+  <meta name="twitter:description" content="Premium stem cell supplements, skincare & opportunity with Renata Health World S/L in Sierra Leone & Africa." />
   <meta name="twitter:image" content="https://renatahealthworldsl.com/images/2.jpg" />
-
-  <title>Renata Health World S/L | Stem Cell Wellness, Business & Opportunity</title>
-
-  <link rel="stylesheet" href="style.css" />
 
 </head>
 
 <body>
 
-
+<!-- Navigation -->
 <nav>
   <div class="nav-container">
     <div class="logo">
       <img src="images/Renata-Health-World-3D-logo-768x240.png" alt="Renata Health World Logo">
     </div>
-
-    <!-- Hamburger icon -->
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-
-    <!-- Navigation links -->
-    <div class="nav-links" id="navLinks">
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <div class="nav-links" id="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="opportunity.html">Opportunity</a>
@@ -65,196 +61,106 @@
   </div>
 </nav>
 
-
-
-
 <!-- Hero Section -->
-<section class="hero-section classy-hero">
-  <div class="hero-overlay"></div>
+<section class="classy-hero">
   <div class="hero-content">
     <img src="images/Renata-Health-World-3D-logo-768x240.png" alt="Renata Health World S/L" class="hero-logo">
-    <p class="hero-tagline">Your Path to Health & Wealth Starts Here</p>
-    <h1>Transform Your Life with Renata Stem Cell Wellness</h1>
-    <a href="https://wa.me/23272146015" class="cta-button classy-btn">Join Our Community</a>
+    <p class="hero-tagline">Wellness • Skincare • Opportunity</p>
+    <h1>Transform Your Life with Renata Stem Cell Nutrition</h1>
+    <a href="https://wa.me/23272146015" class="classy-btn">Join Us on WhatsApp</a>
   </div>
 </section>
 
-
-
-<!-- Carousel Styles -->
-<style>
-.hero-carousel {
-  position: relative;
-  height: 500px;
-  overflow: hidden;
-}
-.carousel {
-  display: flex;
-  height: 100%;
-  width: 300%;
-  animation: slide 25s infinite;
-}
-.carousel-slide {
-  width: 100%;
-  flex-shrink: 0;
-  transition: transform 0.15s ease;
-}
-.carousel-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.carousel-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  z-index: 10;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-}
-.carousel-text h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-}
-.carousel-text h2 {
-  font-size: 1.5em;
-  margin-bottom: 20px;
-}
-@keyframes slide {
-  0% { transform: translateX(0%); }
-  33% { transform: translateX(0%); }
-  40% { transform: translateX(-100%); }
-  73% { transform: translateX(-100%); }
-  80% { transform: translateX(-200%); }
-  100% { transform: translateX(-200%); }
-}
-@media (max-width: 768px) {
-  .hero-carousel { height: 300px; }
-  .carousel-text h1 { font-size: 1.8em; }
-  .carousel-text h2 { font-size: 1em; }
-}
-</style>
-
-  
-<!-- About Renata Company Section -->
+<!-- About Section -->
 <section class="about-renata">
   <div class="container">
-    <h2>About Renata Health World</h2>
+    <h2>About Renata Health World S/L</h2>
     <p>
-      <strong>Renata Health World</strong> is a global wellness company founded in Malaysia. With a vision to transform lives through natural wellness and income empowerment, Renata has expanded rapidly across Asia and Africa.
+      Renata Health World is a global wellness company founded in Malaysia, bringing premium <strong>stem cell nutrition</strong>, <strong>skincare</strong>, and <strong>income opportunities</strong> to Sierra Leone and Africa.
     </p>
     <p>
-      Today, Renata Health World operates in more than **20 countries**, with thousands of satisfied members and distributors.
+      Currently present in over <strong>20 countries</strong>, Renata offers:
     </p>
+    <ul>
+      <li>✔️ Renata StemFood Cell — advanced stem cell supplement</li>
+      <li>✔️ Risepresso — functional coffee with Ganoderma & Tongkat Ali</li>
+      <li>✔️ New wellness and skincare products launching soon</li>
+    </ul>
     <p>
-      Our product line currently includes:
-      <ul style="text-align: left; max-width: 800px; margin: 0 auto;">
-        <li>✔️ <strong>Renata StemFood Cell</strong> — our flagship stem cell nutrition product</li>
-        <li>✔️ <strong>Risepresso</strong> — functional wellness coffee with Ganoderma & Tongkat Ali</li>
-        <li>✔️ New products launching soon (skincare, detox supplements, and more)</li>
-      </ul>
+      Based in <strong>Jui, Freetown</strong>, Renata Health World S/L is committed to empowering individuals through <strong>health & wealth transformation</strong>.
     </p>
-    <p>
-      The company is officially headquartered in **Kuala Lumpur, Malaysia**, with strong local presence and leadership in **Sierra Leone, Ghana, Liberia, Nigeria, Kenya**, and other African countries.
-    </p>
-    <p>
-      In Sierra Leone, Renata Health World S/L is proudly based in **Jui, Freetown** — empowering communities through health, wellness, and opportunity.
-    </p>
-    <!-- Optional: If you upload an office building or group picture -->
-    <div class="company-image">
-      <img src="images/rbuilding.webp" alt="Renata Health World Office" style="max-width: 600px; border-radius: 10px; margin-top: 20px;">
-    </div>
+    <img src="images/rbuilding.webp" alt="Renata Health Office Sierra Leone" class="enlargeable">
+    <a href="about.html" class="cta-button">Learn More</a>
   </div>
-
-  <a href="about.html" class="cta-button">More About Us</a>
-
 </section>
 
-
-
-<!-- Product Preview -->
-<section class="product-preview section">
+<!-- Products Section -->
+<section class="product-preview">
   <div class="container">
     <h2>Our Premium Products</h2>
-    <div class="product-image">
-      <img src="images/banner2.jpg.webp" alt="Renata StemFood Cell" class="enlargeable" loading="lazy">
-    </div>
-    <section>
-    <p><strong>Renata StemFood Cell</strong> is a world-class stem cell supplement crafted with 6 powerful ingredients — supporting immune function, skin beauty, and youthful energy. Trusted across Africa!</p>
-    </section>
+    <img src="images/banner2.jpg.webp" alt="Renata StemFood Cell" class="enlargeable">
+    <p><strong>Renata StemFood Cell</strong> supports immunity, skin beauty, energy, and cellular regeneration.</p>
+    
+    <img src="images/renita.jpg" alt="Risepresso Coffee" class="enlargeable">
+    <p><strong>Risepresso Coffee</strong> blends Ganoderma & Tongkat Ali for vitality and wellness.</p>
   </div>
-
-<div class="product-image">
-      <img src="images/renita.jpg" alt="Renata StemFood Cell" class="enlargeable" loading="lazy">
-    </div>
-
 </section>
-
-
-
 
 <!-- Opportunity Section -->
-<section class="opportunity section">
+<section class="opportunity">
   <div class="container">
     <h2>Income Opportunity</h2>
-    <p>Thousands across Africa are now earning through Renata’s proven business model. No experience required — we provide training, support, and tools for success.</p>
-    <a href="opportunity.html" class="cta-button">Learn More</a>
+    <p>Earn income by sharing Renata’s wellness products! No experience required. Our team provides full training and support.</p>
+    <a href="opportunity.html" class="cta-button">Get Started Today</a>
   </div>
 </section>
 
-<!-- Testimonials -->
-<section class="testimonials section">
+<!-- Testimonials Section -->
+<section class="testimonials">
   <div class="container">
-    <h2>What People Are Saying</h2>
-    <p>"I’ve seen amazing results in my health and also made extra income. Renata has changed my life!" — <strong>Fatmata J.</strong></p>
-    <a href="testimonials.html" class="cta-button">View More Stories</a>
+    <h2>What Our Members Are Saying</h2>
+    <blockquote>
+      “I improved my health and earned extra income with Renata. Highly recommend!” — <strong>Fatmata J.</strong>
+    </blockquote>
+    <a href="testimonials.html" class="cta-button">Read More Stories</a>
   </div>
 </section>
 
-<!-- Blog Highlights -->
-<section class="blog-preview section">
+<!-- Blog Section -->
+<section class="blog-preview">
   <div class="container">
-    <h2>Latest From Our Blog</h2>
-
+    <h2>Latest Blog Updates</h2>
     <div class="blog-post">
-      <h3>🌿 5 Natural Ingredients to Boost Your Stem Cells</h3>
-      <p>Explore the amazing science of stem cells and discover how our natural ingredients rejuvenate the body...</p>
+      <h3>🌿 5 Natural Ingredients to Boost Stem Cells</h3>
+      <p>Learn how Renata’s ingredients help rejuvenate your health...</p>
       <a href="blog.html" class="cta-button">Read More</a>
     </div>
-
     <div class="blog-post">
-  <h3>💪 Success Story: How Emmah Improved Her Energy</h3>
-  <p>Emmah’s inspiring journey with Renata began with a personal transformation in her energy and well-being. Motivated by her results, she started sharing her experience with friends and family—leading to vibrant health and new income opportunities.</p>
-  <a href="blog.html" class="cta-button">Read More</a>
-</div>
-
-
+      <h3>💪 Emmah’s Success Story: Energy & Income</h3>
+      <p>How Emmah’s journey with Renata improved her vitality and created new income opportunities...</p>
+      <a href="blog.html" class="cta-button">Read More</a>
+    </div>
   </div>
 </section>
-
-
 
 <!-- Contact Section -->
-<section class="contact section">
+<section class="contact">
   <div class="container">
-    <h2>Let’s Connect</h2>
-    <p>Have questions? Want to order? Interested in becoming a distributor?</p>
-    <a href="contact.html" class="cta-button">Contact Us</a>
+    <h2>Ready to Connect?</h2>
+    <p>Have questions? Want to order? Interested in the business opportunity?</p>
+    <a href="contact.html" class="cta-button">Contact Us Now</a>
   </div>
 </section>
 
-
+<!-- Mobile Nav Script -->
 <script>
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('nav-links');
 
   hamburger.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    navLinks.classList.toggle('active');
   });
 </script>
-
 
 <!-- WhatsApp Floating Button -->
 <script type="text/javascript">
@@ -274,10 +180,9 @@
 <!-- Call Floating Button -->
 <a href="tel:+23272146015" style="
 position: fixed; bottom: 100px; right: 20px; z-index: 999;
-background-color: #0c5470; color: white; padding: 15px 20px;
-border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-font-size: 20px; text-align: center; text-decoration: none;
-">
+background-color: #f6c105; color: white; padding: 15px 20px;
+border-radius: 50%; font-size: 20px; text-align: center;
+box-shadow: 0 4px 12px rgba(0,0,0,0.2); text-decoration: none;">
 📞
 </a>
 
