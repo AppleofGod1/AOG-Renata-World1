@@ -550,6 +550,26 @@ body {
 }
 
 
+@media (max-width: 768px) {
+  .logo img {
+    max-width: 150px;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
 
 
 
