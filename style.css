@@ -573,3 +573,11 @@ body {
 
 
 
+@media (max-width: 768px) {
+  .logo img {
+    max-width: 140px; /* smaller logo for phone */
+    height: auto;
+    margin: 10px auto 15px auto; /* top & bottom spacing, center logo */
+    display: block;
+  }
+}
